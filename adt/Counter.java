@@ -1,10 +1,11 @@
 package adt;
 
-public class Counter	{
-	String name = null;
-	int num = 0;
+public abstract class Counter	{
+	private String name = null;
+	private int num = 0;
 	
 	public Counter(String str)	{
+		super();
 		this.name = str;
 	}
 	

@@ -1,17 +1,21 @@
-public class App	{
+public class App    {
 
-	public static void main(String args[])	{
+    public static void main(String[] args)  {
+        Stack d = new Stack(5);
+        d.push(10);
+        d.push(20);
+        d.push(30);
+        d.push(40);
+        d.push(50);
+        d.pop();
+        d.push(60);
+        d.push(50);
+        d.pop();
 
-		Stack newStack = new Stack(3);
-		newStack.push(10);
-		newStack.push(20);
-		newStack.push(30);
-		
-		while(!newStack.isEmpty())	{
-			long value = newStack.pop();
-			System.out.println(value);
-		}
-	}
+        while(!d.isEmpty())    {
+            int value = d.pop();
+            System.out.println(value);
+        }
+    }
 
 }
-

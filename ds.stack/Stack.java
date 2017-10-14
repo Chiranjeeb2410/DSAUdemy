@@ -1,47 +1,42 @@
-public class Stack	{
+public class Stack  {
 
-	private int maxSize;	// denotes the array/stack size.
-	private long[] stackArray;	//denotes the container within which the data is kept.
-	private int top;	//	denotes topmost element of stack.
+    public int maxSize; // size of array
+    public int[] stackArray;  //elements of the created array
+    public int top; //  top element
 
-	public Stack(int size)	{
-		this.maxSize = size;
-		this.stackArray = new long[maxSize];
-		this.top = -1;
-	}
+    public Stack(int size)  {
+        this.maxSize = size;
+        this.stackArray = new int[maxSize];
+        top = -1;
+    }
 
-	public boolean isEmpty()	{
-		return (top == -1);	//	checking if stack is empty.
-	}
-	
-	public boolean isFull()	{
-		return (top == maxSize -1);	//	condition checking if stack is full.
-	}
-		
-	public void push(int j)	{
-		if(isFull())	{
-			System.out.println("Stack's already full");
-		}		
-		else	{
-			top++;
-		}
-	}
-	
-	public long pop()	{
-		if(isEmpty())	{
-			System.out.println("Stack's already empty");
-		return -1;		
-		}
-		else	{
-			int old_top = top;
-			top--;
-			return stackArray[old_top];
-		}
-	}
+    void push(int p)    {
+        if(isFull())    {
+            System.out.println("Stack overflow!");
+        }
+        else    {
+            top++;
+            stackArray[top] = p;
+        }
+    }
 
-	public long peak()	{
-		return stackArray[top];	//	displays topmost element.
-	}
+    int pop()  {
+        if(isEmpty())   {
+            return -1;
+        }
+        else    {
+            int old_top = top;
+            top--;
+            return stackArray[old_top];
+        }
+    }
+
+    boolean isEmpty()   {
+        return (top == -1);
+    }
+
+    boolean isFull()    {
+        return (maxSize - 1 == top);
+    }
 
 }
-

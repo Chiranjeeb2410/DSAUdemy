@@ -1,21 +1,26 @@
 public class App    {
 
     public static void main(String[] args)  {
-        Stack d = new Stack(5);
-        d.push(10);
-        d.push(20);
-        d.push(30);
-        d.push(40);
-        d.push(50);
-        d.pop();
-        d.push(60);
-        d.push(50);
-        d.pop();
+
+        System.out.println(reverseString("Hello"));
+
+    }
+
+    public static String reverseString(String str)  {
+        int stackSize  = str.length();
+        Stack d = new Stack(stackSize);
+        for(int i=0;i<str.length();i++) {
+            char ch = str.charAt(i);
+            d.push(ch);
+        }
+
+        String result = "";
 
         while(!d.isEmpty())    {
-            int value = d.pop();
-            System.out.println(value);
+            char ch = d.pop();
+            result = result + ch;
         }
+        return result;
     }
 
 }

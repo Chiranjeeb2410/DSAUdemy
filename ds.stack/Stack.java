@@ -22,7 +22,6 @@ public class Stack  {
 
     char pop()  {
         if(isEmpty())   {
-            System.out.println("Empty");
             return ' ';
         }
         else    {

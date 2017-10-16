@@ -14,6 +14,15 @@ public class App    {
 
         theList.deleteFirst();
 
+        CircularLinkedList myList = new CircularLinkedList();
+        myList.insertFirst(10);
+        myList.insertFirst(20);
+        myList.insertFirst(30);
+        myList.insertFirst(40);
+        myList.insertFirst(50);
+
         theList.displayList();
+        System.out.println();
+        myList.displayList();
     }
 }

@@ -1,8 +1,8 @@
 public class Stack  {
 
-    public int maxSize; // size of array
-    public char[] stackArray;  //elements of the created array
-    public int top; //  top element
+    private int maxSize; // size of array
+    private char[] stackArray;  //elements of the created array
+    private int top; //  top element
 
     public Stack(int size)  {
         this.maxSize = size;

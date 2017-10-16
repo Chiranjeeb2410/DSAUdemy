@@ -2,36 +2,38 @@ public class NodeApp    {
 
     public static void main(String[] args)  {
 
-        Node nodeA = new Node(); // head node
-        nodeA.data = 1;
+        Node node1 = new Node(); // head node
+        node1.data = 1;
 
-        Node nodeB = new Node();
-        nodeB.data = 2;
+        Node node2 = new Node();
+        node2.data = 2;
 
-        Node nodeC = new Node();
-        nodeC.data = 3;
+        Node node3 = new Node();
+        node3.data = 3;
 
-        Node nodeD = new Node();
-        nodeD.data = 4;
+        Node node4 = new Node();
+        node4.data = 4;
 
-        nodeA.next = nodeB;
-        nodeB.next = nodeC;
-        nodeC.next = nodeD;
+        node1.next = node2;
+        node2.next = node3;
+        node3.next = node4;
 
 
-        System.out.println(listLength(nodeA));
-        System.out.println(listLength(nodeB));
+        System.out.println(listLength(node1));
+        System.out.println(listLength(node2));
 
     }
 
     public static int listLength(Node aNode)   {
-        int count;
+        int count = 1;
         Node currentNode = aNode;
 
         while(currentNode.next != null) {
             count++;
             currentNode = currentNode.next;
         }
+
+        return count;
     }
 
 }

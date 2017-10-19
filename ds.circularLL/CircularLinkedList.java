@@ -1,26 +1,27 @@
 public class CircularLinkedList {
 
-    private Node first;
-    private Node last;
+    public Node first;
+    public Node last;
 
-    public CircularLinkedList() {
-        this.first = null;
-        this.last = null;
+    public boolean isEmpty()    {
+        return (first == null);
     }
-
     public void insertFirst(int data)   {
         Node newNode = new Node();
         newNode.data = data;
+
         if(isEmpty())   {
             last = newNode;
         }
-        newNode.next = first; // newNode --> old_first
-        first = newNode;    // first place
+
+        newNode.next = first;
+        first = newNode;
     }
 
-    public void insertLast(int data) {
-        New newNode = new Node();
+    public void insertLast(int data)    {
+        Node newNode = new Node();
         newNode.data = data;
+
         if(isEmpty())   {
             first = newNode;
         }
@@ -30,12 +31,8 @@ public class CircularLinkedList {
         }
     }
 
-    public int deleteFirst()    {
-        int temp = first.data;
-        if(first.next == null)  {
-            last = null;
-        }
-
+    public Node deleteFirst()    {
+        Node temp = first;
         first = first.next;
         return temp;
     }

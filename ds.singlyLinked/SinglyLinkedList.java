@@ -14,9 +14,14 @@ public class SinglyLinkedList   {
     }
 
     public Node deleteFirst()   {
-        Node temp = first;
-        first = first.next;
-        return temp;
+        if(isEmpty())   {
+            return null;
+        }
+        else {
+            Node temp = first;
+            first = first.next;
+            return temp;
+        }
     }
 
     public void displayList()   {

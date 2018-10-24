@@ -1,0 +1,5 @@
+*****************
+Binary Search Tree: Inspired by the Binary Search Algorithm. The tree inherits the same
+advantage of a lightning fast search capability through an already sorted array.
+
+*****************

@@ -1,10 +1,10 @@
-public class Animal	{
+public class Animals	{
 
 	String name;
 	int age;
 	int heightInInches;
 
-	public Animal(String name, int age, int heightInInches)	{
+	public Animals(String name, int age, int heightInInches)	{
 		super();
 		this.name = name;
 		this.age = age;
